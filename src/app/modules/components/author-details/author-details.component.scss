@@ -1,0 +1,19 @@
+mat-card {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: left;
+  
+    mat-card-header {
+      text-align: center;
+    }
+  
+    .author-photo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 20px auto;
+      display: block;
+    }
+  }
+  

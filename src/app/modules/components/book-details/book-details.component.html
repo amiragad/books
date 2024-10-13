@@ -1,0 +1,14 @@
+<div class="container mt-4">
+    <mat-card *ngIf="bookDetails">
+      <mat-card-title>{{ bookDetails.title }}</mat-card-title>
+      <mat-card-content>
+        <p><strong>First Publish Year:</strong> {{ bookDetails.first_publish_year || 'Unknown' }}</p>
+        <p><strong>Author(s):</strong> {{ authorNames }}</p>
+        <p><strong>Editions Count:</strong> {{ bookDetails.editions || 'Unknown' }}</p>
+        <p><strong>Number of Pages:</strong> {{ bookDetails.number_of_pages_median || 'Unknown' }}</p>
+        <button mat-raised-button color="accent" (click)="addToWishlist()">Add to Wishlist</button>
+      </mat-card-content>
+      <button mat-raised-button color="primary" routerLink="/">Back to Home</button>
+    </mat-card>
+  </div>
+  

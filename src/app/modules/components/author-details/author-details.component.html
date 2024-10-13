@@ -1,0 +1,15 @@
+<div class="container mt-4">
+    <mat-card *ngIf="authorDetails">
+      <mat-card-header>
+        <mat-card-title>{{ authorDetails.name }}</mat-card-title>
+        <mat-card-subtitle>Birth Date: {{ authorDetails.birth_date || 'Unknown' }}</mat-card-subtitle>
+      </mat-card-header>
+      <img *ngIf="authorDetails.photo_url" [src]="authorDetails.photo_url" alt="Author Photo" class="author-photo" />
+      <mat-card-content>
+        <p><strong>Works Count:</strong> {{ authorDetails.works_count || 'Unknown' }}</p>
+        <p><strong>Top Subjects:</strong> {{ authorDetails.top_subjects?.join(', ') || 'None' }}</p>
+      </mat-card-content>
+      <button mat-raised-button color="primary" routerLink="/">Back to Home</button>
+    </mat-card>
+  </div>
+  

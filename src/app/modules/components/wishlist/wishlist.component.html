@@ -1,0 +1,16 @@
+<div class="container mt-4">
+    <h2>Your Wishlist</h2>
+    <div class="row mt-4">
+      <div class="col-md-4" *ngFor="let book of wishlist">
+        <mat-card class="mb-3">
+          <img [src]="getBookCover(book)" alt="Book Cover" class="img-fluid">
+          <mat-card-content>
+            <h5>{{ book.title }}</h5>
+            <button mat-raised-button color="warn" (click)="removeFromWishlist(book)">Remove</button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+    <div *ngIf="wishlist.length === 0">No books in your wishlist.</div>
+  </div>
+  
